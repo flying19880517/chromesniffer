@@ -234,7 +234,7 @@
       return window.Piwik;
     },
     'IPB': function () {
-      return window.IPBoard;
+      return ( window.IPBoard || window.ipsSettings );
     },
     'MyBB': function () {
       return window.MyBB;
@@ -357,7 +357,7 @@
     },
     'Dojo': function () {
       if (typeof dojo === 'object' && dojo.version.toString() !== undefined)
-        return dojo.version;
+        return dojo.version.toString();
     },
     'YUI': function () {
       if (typeof YAHOO === 'object' && YAHOO.VERSION !== undefined)
